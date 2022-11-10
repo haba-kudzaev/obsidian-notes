@@ -36,7 +36,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - name: SassDoc
-        run: npx sassdoc . -d docs/
+        run: npx sassdoc . -d docs/ --theme neat
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
