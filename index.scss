@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@forward 'configs';
+
+@forward 'modules/prefixer';
+@forward 'modules/bem';
+@forward 'modules/wh';
+@forward 'modules/visually-hidden';
+@forward 'modules/user-select';
+@forward 'modules/transition';
+@forward 'modules/transition/delay';
+@forward 'modules/transition/duration';
+@forward 'modules/transition/property';
+@forward 'modules/transition/timing-function';
+@forward 'modules/transform';
+@forward 'modules/transform/origin';
+@forward 'modules/transform/origin-hard';
+
+@forward 'modules/utilities/color-shade';
+@forward 'modules/utilities/color-tint';
+@forward 'modules/utilities/contains';
+@forward 'modules/utilities/is-bool';
+@forward 'modules/utilities/is-exist';
+@forward 'modules/utilities/is-int';
+@forward 'modules/utilities/is-list';
+@forward 'modules/utilities/is-map';
+@forward 'modules/utilities/is-string';
+@forward 'modules/utilities/is-time';
+@forward 'modules/utilities/map-deep-get';
+@forward 'modules/utilities/map-deep-set';
+@forward 'modules/utilities/number-clamp';
+@forward 'modules/utilities/number-invert';
+@forward 'modules/utilities/string-replace';
+@forward 'modules/utilities/url-encoder';
+@forward 'modules/utilities/strip-unit';
+@forward 'modules/utilities/string-starts-with';
+@forward 'modules/utilities/string-ends-with';
+@forward 'modules/utilities/string-contains';
+@forward 'modules/utilities/list-first';
+@forward 'modules/utilities/list-last';
+@forward 'modules/utilities/set-initial';

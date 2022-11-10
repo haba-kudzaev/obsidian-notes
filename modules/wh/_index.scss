@@ -1,0 +1,115 @@
+@use '../../configs' as *;
+@use '../@invalid-value-message' as *;
+@use '../utilities/is-exist' as *;
+
+/// Миксин `wh()` позволяет в одну строку указать
+/// значение CSS-свойств `width`, `height`, а также
+/// `[min|max]-width` и `[min|max]-height`.
+/// ---
+/// @name wh
+/// @access public
+/// @since 6.0.0
+/// @author Haba Kudzaev (rx1310)
+/// @link https://rx1310.github.io/kalium19
+/// @example scss - Пример использования в Sass (SCSS)
+/// 	.example {
+/// 		@include wh(100px);
+/// 	}
+/// 	.example {
+/// 		@include wh(100px, 80px);
+/// 	}
+/// 	.example {
+/// 		@include wh(100px, null, max);
+/// 	}
+/// 	.example {
+/// 		@include wh(null, 80px, min);
+/// 	}
+/// @example css - Результат в CSS
+/// 	.example {
+/// 	  width: 100px;
+/// 	  height: 100px;
+/// 	}
+/// 	.example {
+/// 	  width: 100px;
+/// 	  height: 80px;
+/// 	}
+/// 	.example {
+/// 	  max-width: 100px;
+/// 	}
+/// 	.example {
+/// 	  min-height: 80px;
+/// 	}
+/// @param {Number} $width - ширина
+/// @param {Number} $height [$width] - высота
+/// @param {String} $type [normal] - тип (mix/max или без них)
+@mixin wh($width, $height: $width, $type: normal) {
+
+	// Проверяем, есть ли `$type` в списке `$vvalues-wh`...
+	@if is-exist($vvalues-wh, $type) {
+
+		// ... если да, то проверяем тип.
+		// Если тип `normal`, то:
+		@if $type == normal {
+			width: $width;
+			height: $height;
+		}
+
+		// Если тип отличен от `normal`, то:
+		@else {
+			#{$type}-width: $width;
+			#{$type}-height: $height;
+		}
+
+	}
+
+	// Если `$type` нет в списке `$vvalues-wh`
+	// отобразим сообщение об этом:
+	@else {
+		@include invalid-value-message($vvalues-wh, 'wh()', $type);
+	}
+
+}
+
+/// Миксин `size()` является алиасом для миксина
+/// `wh()`.
+/// ---
+/// @name size
+/// @alias wh
+/// @access public
+/// @since 6.0.0
+/// @author Haba Kudzaev (rx1310)
+/// @link https://rx1310.github.io/kalium19
+/// @example scss - Пример использования в Sass (SCSS)
+/// 	.example {
+/// 		@include size(100px);
+/// 	}
+/// 	.example {
+/// 		@include size(100px, 80px);
+/// 	}
+/// 	.example {
+/// 		@include size(100px, null, max);
+/// 	}
+/// 	.example {
+/// 		@include size(null, 80px, min);
+/// 	}
+/// @example css - Результат в CSS
+/// 	.example {
+/// 	  width: 100px;
+/// 	  height: 100px;
+/// 	}
+/// 	.example {
+/// 	  width: 100px;
+/// 	  height: 80px;
+/// 	}
+/// 	.example {
+/// 	  max-width: 100px;
+/// 	}
+/// 	.example {
+/// 	  min-height: 80px;
+/// 	}
+/// @param {Number} $width - ширина
+/// @param {Number} $height [$width] - высота
+/// @param {String} $type [normal] - тип (mix/max или без них)
+@mixin size($width, $height: $width, $type: normal) {
+	@include wh($width, $height, $type);
+}

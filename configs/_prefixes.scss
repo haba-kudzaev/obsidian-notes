@@ -1,0 +1,105 @@
+/// Список всех браузерных префиксов, которые я смог найти.
+/// ---
+/// @name prefixes-all
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+$prefixes-all: webkit khtml moz ms o !default;
+
+/// Список браузерных префиксов для CSS-свойства
+/// `user-select` и одноименного миксина.
+/// ---
+/// @name prefixes-user-select
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+/// @see {mixin} user-select
+$prefixes-user-select: webkit moz ms !default;
+
+/// Список браузерных префиксов для CSS-свойства
+/// `transition` и одноименного миксина.
+/// ---
+/// @name prefixes-transition
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+/// @see {mixin} transition
+$prefixes-transition: webkit moz o !default;
+
+/// Список браузерных префиксов для CSS-свойства
+/// `transition-delay` и одноименного миксина.
+/// ---
+/// @name prefixes-transition-delay
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+/// @see {mixin} transition-delay
+$prefixes-transition-delay: webkit moz o !default;
+
+/// Список браузерных префиксов для CSS-свойства
+/// `transition-duration` и одноименного миксина.
+/// ---
+/// @name prefixes-transition-duration
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+/// @see {mixin} transition-duration
+$prefixes-transition-duration: webkit moz o !default;
+
+/// Список браузерных префиксов для CSS-свойства
+/// `transition-property` и одноименного миксина.
+/// ---
+/// @name prefixes-transition-property
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+/// @see {mixin} transition-property
+$prefixes-transition-property: webkit moz o !default;
+
+/// Список браузерных префиксов для CSS-свойства
+/// `transition-timing-function` и одноименного миксина.
+/// ---
+/// @name prefixes-transition-timing-function
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+/// @see {mixin} transition-timing-function
+$prefixes-transition-timing-function: webkit moz o !default;
+
+/// Список браузерных префиксов для CSS-свойства
+/// `transform` и одноименного миксина.
+/// ---
+/// @name prefixes-transform
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+/// @see {mixin} transform
+$prefixes-transform: webkit moz ms o !default;
+
+/// Список браузерных префиксов для CSS-свойства
+/// `transform-origin` и одноименного миксина.
+/// ---
+/// @name prefixes-transform-origin
+/// @group configs
+/// @access public
+/// @since 6.0.0
+/// @type List
+/// @see {mixin} prefixer
+/// @see {mixin} transform-origin
+$prefixes-transform-origin: webkit moz ms o !default;
